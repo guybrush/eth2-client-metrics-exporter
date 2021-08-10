@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 RUN make test && make build-binary
 
-FROM --platform=${TARGETPLATFORM:-linux/amd64} alpine:latest
+FROM --platform=${TARGETPLATFORM:-linux/amd64} alpine:latest as prod
 RUN addgroup -S app \
     && adduser -S -G app app \
     && apk --no-cache add \
