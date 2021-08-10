@@ -22,7 +22,6 @@ jobs:
           echo "::set-output name=docker_tags::${DOCKER_TAGS}"
       -
         name: Set up QEMU
-        id: buildx
         uses: docker/setup-qemu-action@v1
         with:
           platforms: all
