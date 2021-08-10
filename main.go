@@ -79,7 +79,7 @@ func main() {
 	flag.Parse()
 
 	if *versionFlag {
-		fmt.Printf("git-commit: %v\ngit-date: %v\nbuild-date: %v\ngo-version: %v\n", GitCommit, GitDate, BuildDate, GoVersion)
+		fmt.Printf("git-commit: %v\ngit-date: %v\ngo-version: %v\n", GitCommit, GitDate, GoVersion)
 		return
 	}
 

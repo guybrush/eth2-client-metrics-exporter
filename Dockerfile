@@ -3,6 +3,7 @@ ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 ARG VERSION
 RUN echo "running on $BUILDPLATFORM, building for $TARGETPLATFORM"
+RUN apk add --no-cache git make bash build-base
 WORKDIR /app
 COPY . .
 RUN make test && make build-binary
